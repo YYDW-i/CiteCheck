@@ -1,0 +1,12 @@
+{
+  "name": "citecheck-root",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c auto \"cd backend && .\\.venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --port 8000\" \"cd frontend && \\\"C:\\\\Program Files\\\\nodejs\\\\npm.cmd\\\" run dev\"",
+
+    "postinstall": "node scripts/fix-node-shim.cjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
